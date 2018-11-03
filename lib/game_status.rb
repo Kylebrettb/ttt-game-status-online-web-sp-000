@@ -8,6 +8,8 @@ end
 def won?(board)
   WIN_COMBINATIONS.each |win_combo|
     if win_combo.all?{|i| board [i] == "X"} || win_combo.all?{|i| board [i] == "O"}
+      win_combo
     end
-  end  
+  end
+  false
 end
