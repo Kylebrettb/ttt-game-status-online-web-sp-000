@@ -8,8 +8,8 @@ end
 def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
     if win_combo.all?{ |i| board[i] == "X"} || win_combo.all?{ |i| board[i] == "O"}
-     win_combo
+     return win_combo
     end
   end
- false
+ return false
 end
